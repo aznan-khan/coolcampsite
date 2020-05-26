@@ -17,7 +17,8 @@ var authRoutes 			= require("./routes/auth"),
 
 
 var seedDB = require("./seed")
- mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
+var url = process.env.DATABASEUR || 'mongodb://localhost:27017/yelp_camp2'
+ mongoose.connect(url, {useNewUrlParser: true});
 // mongoose.connect("mongodb+srv://Aznan:Aznan@1234@cluster0-vryyw.mongodb.net/yelpcamp?retryWrites=true&w=majority", {
 // 	useNewUrlParser: true
 // });
